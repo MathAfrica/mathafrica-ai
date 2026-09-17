@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathAfrica AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>MathAfrica AI 🤖</h1>
+    <p>Learn Mathematics. Practice. Understand. Improve.</p>
+  </header>
+
+  <main>
+
+    <section id="home">
+      <h2>Welcome to MathAfrica AI</h2>
+      <p>
+        An African mathematics learning platform helping children
+        understand mathematics step-by-step.
+      </p>
+
+      <button onclick="showStudent()">👨‍🎓 Student</button>
+      <button onclick="showTeacher()">👩‍🏫 Teacher</button>
+    </section>
+
+    <section id="student" class="hidden">
+      <h2>Student Learning</h2>
+
+      <p>Choose your class:</p>
+
+      <button onclick="selectClass('Primary 5')">
+        Primary 5
+      </button>
+
+      <button onclick="selectClass('JSS 1')">
+        JSS 1
+      </button>
+
+      <button onclick="goHome()">← Home</button>
+    </section>
+
+    <section id="topics" class="hidden">
+      <h2 id="classTitle"></h2>
+
+      <p>Choose a mathematics topic:</p>
+
+      <button onclick="openFractions()">➗ Fractions</button>
+      <button onclick="comingSoon()">Division</button>
+      <button onclick="comingSoon()">Decimals</button>
+      <button onclick="comingSoon()">Geometry</button>
+
+      <button onclick="showStudent()">← Back</button>
+    </section>
+
+    <section id="fractions" class="hidden">
+      <h2>📚 Fractions</h2>
+
+      <div class="lesson">
+        <h3>What is a fraction?</h3>
+
+        <p>
+          A fraction represents part of a whole.
+        </p>
+
+        <p>
+          Imagine a cake divided into 8 equal pieces.
+          If you eat 3 pieces, you have eaten:
+        </p>
+
+        <h2>3/8</h2>
+
+        <p>
+          <strong>3</strong> is the numerator —
+          the number of pieces taken.
+        </p>
+
+        <p>
+          <strong>8</strong> is the denominator —
+          the total number of equal pieces.
+        </p>
+      </div>
+
+      <h3>✏️ Practice Question</h3>
+
+      <p>
+        A pizza is divided into 8 equal pieces.
+        A child eats 3 pieces.
+        What fraction of the pizza did the child eat?
+      </p>
+
+      <input
+        type="text"
+        id="answer"
+        placeholder="Type your answer e.g. 3/8"
+      >
+
+      <button onclick="checkAnswer()">Check Answer</button>
+
+      <p id="feedback"></p>
+
+      <button onclick="goHome()">🏠 Home</button>
+    </section>
+
+    <section id="teacher" class="hidden">
+      <h2>👩‍🏫 Teacher Area</h2>
+
+      <p>
+        Teacher tools are coming soon.
+      </p>
+
+      <p>
+        Future tools will include lesson plans,
+        worksheets, tests, answer keys and student reports.
+      </p>
+
+      <button onclick="goHome()">← Home</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 MathAfrica AI</p>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
